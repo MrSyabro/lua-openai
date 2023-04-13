@@ -1,6 +1,6 @@
 local https = require("ssl.https")
 local ltn12 = require("ltn12")
-local json = require("json")
+local json = require("dkjson")
 
 ---@class OpenAI : table<string, OpenAI>
 ---@field org_key string #Ключ организации
