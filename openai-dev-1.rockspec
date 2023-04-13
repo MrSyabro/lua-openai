@@ -1,4 +1,4 @@
-package = "cardwallet_tbot"
+package = "openai"
 version = "dev-1"
 source = {
    url = "git+https://git@github.com/MrSyabro/lua-openai.git",
