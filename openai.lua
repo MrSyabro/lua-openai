@@ -2,13 +2,10 @@ local https = require("ssl.https")
 local ltn12 = require("ltn12")
 local json = require("json")
 
----""
-
 ---@class OpenAI : table<string, OpenAI>
 ---@field org_key string #Ключ организации
 ---@field sec_key string #секретный ключ доступа
 ---@operator call:table #запрос на сервер
----@operator index:OpenAI
 local o = {uri = [[https://api.openai.com/v1]]}
 
 function o.__index(self, key)
