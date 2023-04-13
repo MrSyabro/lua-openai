@@ -25,6 +25,7 @@ function o.__call(self, req_data)
 		}
 	}
 	if req_data then
+		req["Content-Type"] = "application/json"
 		req.method = "POST"
 		req.source = ltn12.source.string(json.encode(req_data))
 	end
@@ -34,10 +35,10 @@ function o.__call(self, req_data)
 end
 
 ---Создает экземпляр для запросов на сервер
----@param org string #ключ организации
 ---@param sec string #секретный ключ доступа
+---@param org string? #ключ организации
 ---@return OpenAI
-return function(org, sec)
+return function(sec, org)
 	local newoai = setmetatable({}, o)
 	newoai.org_key = org
 	newoai.sec_key = sec

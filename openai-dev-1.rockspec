@@ -5,7 +5,7 @@ source = {
    branch = "master",
 }
 description = {
-   homepage = "Простая библиотека для доступа к OpenAI API",
+   homepage = "https://github.com/MrSyabro/lua-openai",
    license = "MIT/X11",
    maintainer = "MrSyabro",
 }
